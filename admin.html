@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard Admin — PPDB Riyadhul Jannah</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="admin.css">
+</head>
+<body class="admin-body">
+
+  <!-- ===== LOGIN VIEW ===== -->
+  <section id="loginView" class="login-screen">
+    <form id="loginForm" class="login-card">
+      <div class="brand-mark login-mark">
+        <img src="logo.jpg" alt="Logo Riyadhul Jannah">
+      </div>
+      <p class="login-eyebrow">Panel Panitia</p>
+      <h1>Dashboard PPDB</h1>
+      <p class="login-sub">SMP Akhwat Riyadhul Jannah</p>
+
+      <div class="field">
+        <label for="password">Kata Sandi Admin</label>
+        <input type="password" id="password" name="password" required autocomplete="current-password">
+      </div>
+
+      <div id="loginMessage" class="form-message" role="status" aria-live="polite"></div>
+
+      <button type="submit" id="loginBtn" class="submit-btn">
+        <span class="btn-label">Masuk</span>
+        <span class="btn-spinner" aria-hidden="true"></span>
+      </button>
+
+      <a href="index.html" class="back-link">&larr; Kembali ke formulir pendaftaran</a>
+    </form>
+  </section>
+
+  <!-- ===== DASHBOARD VIEW ===== -->
+  <section id="dashboardView" class="dashboard hidden">
+    <header class="dash-header">
+      <div class="dash-header-inner">
+        <div>
+          <p class="brand-eyebrow">Panel Panitia</p>
+          <h1>Data Pendaftar PPDB</h1>
+        </div>
+        <div class="dash-actions">
+          <button id="downloadCsvBtn" class="btn-secondary">Unduh CSV</button>
+          <button id="logoutBtn" class="btn-secondary">Keluar</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="dash-main">
+      <div class="stats-row">
+        <div class="stat-card">
+          <span class="stat-value" id="statTotal">0</span>
+          <span class="stat-label">Total Pendaftar</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-value" id="statToday">0</span>
+          <span class="stat-label">Daftar Hari Ini</span>
+        </div>
+      </div>
+
+      <div class="dash-toolbar">
+        <input type="search" id="searchInput" placeholder="Cari nama, NISN, atau sekolah asal…">
+        <button id="refreshBtn" class="btn-secondary">Muat Ulang</button>
+      </div>
+
+      <div id="dashMessage" class="form-message" role="status" aria-live="polite"></div>
+
+      <div class="table-scroll">
+        <table id="dataTable">
+          <thead>
+            <tr>
+              <th>Waktu Daftar</th>
+              <th>Nama</th>
+              <th>NISN</th>
+              <th>NIK</th>
+              <th>Tempat, Tgl Lahir</th>
+              <th>Nama Ayah</th>
+              <th>Nama Ibu</th>
+              <th>Sekolah Asal</th>
+              <th>Riwayat Penyakit</th>
+              <th>Alamat</th>
+              <th>Dokumen</th>
+            </tr>
+          </thead>
+          <tbody id="dataTableBody">
+            <!-- diisi oleh admin.js -->
+          </tbody>
+        </table>
+      </div>
+      <p id="emptyState" class="empty-state hidden">Belum ada data pendaftar.</p>
+    </main>
+  </section>
+
+  <script src="config.js"></script>
+  <script src="admin.js"></script>
+</body>
+</html>

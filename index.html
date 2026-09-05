@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PPDB SMP Akhwat Riyadhul Jannah</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="brand">
+        <div class="brand-mark">
+          <img src="logo.jpg" alt="Logo Riyadhul Jannah">
+        </div>
+        <div class="brand-text">
+          <p class="brand-eyebrow">Penerimaan Peserta Didik Baru</p>
+          <h1>SMP Akhwat Riyadhul Jannah</h1>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <div class="hero-inner">
+      <h2>Selamat Datang, Calon Santriwati</h2>
+      <p>Lengkapi formulir pendaftaran berikut dengan data yang benar. Pastikan seluruh dokumen yang diminta sudah tersedia sebelum mengisi formulir, agar proses pendaftaran berjalan lancar.</p>
+      <ul class="hero-checklist">
+        <li>Kartu Keluarga (KK)</li>
+        <li>KTP Orang Tua</li>
+        <li>Pas Foto Anak 3x4</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===== FORM ===== -->
+  <main class="form-wrap">
+    <form id="ppdbForm" novalidate>
+
+      <!-- Data Siswa -->
+      <fieldset class="form-section">
+        <legend>
+          <span class="legend-index">1</span>
+          Data Calon Siswa
+        </legend>
+
+        <div class="field">
+          <label for="nama">Nama Lengkap</label>
+          <input type="text" id="nama" name="nama" placeholder="Sesuai akta kelahiran" required>
+        </div>
+
+        <div class="field-row">
+          <div class="field">
+            <label for="tempatLahir">Tempat Lahir</label>
+            <input type="text" id="tempatLahir" name="tempatLahir" placeholder="Contoh: Bandung" required>
+          </div>
+          <div class="field">
+            <label for="tanggalLahir">Tanggal Lahir</label>
+            <input type="date" id="tanggalLahir" name="tanggalLahir" required>
+          </div>
+        </div>
+
+        <div class="field-row">
+          <div class="field">
+            <label for="nisn">NISN</label>
+            <input type="text" id="nisn" name="nisn" inputmode="numeric" placeholder="10 digit" required>
+          </div>
+          <div class="field">
+            <label for="nik">NIK</label>
+            <input type="text" id="nik" name="nik" inputmode="numeric" placeholder="16 digit" required>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="sekolahAsal">Sekolah Asal</label>
+          <input type="text" id="sekolahAsal" name="sekolahAsal" placeholder="Nama SD/MI asal" required>
+        </div>
+
+        <div class="field">
+          <label for="riwayatPenyakit">Riwayat Penyakit</label>
+          <textarea id="riwayatPenyakit" name="riwayatPenyakit" rows="2" placeholder="Tulis 'Tidak ada' jika tidak memiliki riwayat penyakit"></textarea>
+        </div>
+      </fieldset>
+
+      <!-- Data Orang Tua -->
+      <fieldset class="form-section">
+        <legend>
+          <span class="legend-index">2</span>
+          Data Orang Tua / Wali
+        </legend>
+
+        <div class="field-row">
+          <div class="field">
+            <label for="namaAyah">Nama Ayah</label>
+            <input type="text" id="namaAyah" name="namaAyah" required>
+          </div>
+          <div class="field">
+            <label for="namaIbu">Nama Ibu</label>
+            <input type="text" id="namaIbu" name="namaIbu" required>
+          </div>
+        </div>
+
+        <div class="field-row">
+          <div class="field">
+            <label for="pekerjaanAyah">Pekerjaan Ayah</label>
+            <input type="text" id="pekerjaanAyah" name="pekerjaanAyah" required>
+          </div>
+          <div class="field">
+            <label for="pekerjaanIbu">Pekerjaan Ibu</label>
+            <input type="text" id="pekerjaanIbu" name="pekerjaanIbu" required>
+          </div>
+        </div>
+      </fieldset>
+
+      <!-- Alamat -->
+      <fieldset class="form-section">
+        <legend>
+          <span class="legend-index">3</span>
+          Alamat
+        </legend>
+
+        <div class="field">
+          <label for="alamat">Alamat Rumah Lengkap</label>
+          <textarea id="alamat" name="alamat" rows="3" placeholder="Jalan, RT/RW, Desa/Kelurahan, Kecamatan, Kabupaten/Kota" required></textarea>
+        </div>
+      </fieldset>
+
+      <!-- Dokumen -->
+      <fieldset class="form-section">
+        <legend>
+          <span class="legend-index">4</span>
+          Unggah Dokumen
+        </legend>
+        <p class="section-note">Format JPG, PNG, atau PDF. Ukuran maksimal 5MB per file.</p>
+
+        <div class="field">
+          <label for="fileKK">Kartu Keluarga (KK)</label>
+          <input type="file" id="fileKK" name="fileKK" accept=".jpg,.jpeg,.png,.pdf" required>
+          <span class="file-hint" data-hint-for="fileKK">Belum ada file dipilih</span>
+        </div>
+
+        <div class="field">
+          <label for="fileKTP">KTP Orang Tua</label>
+          <input type="file" id="fileKTP" name="fileKTP" accept=".jpg,.jpeg,.png,.pdf" required>
+          <span class="file-hint" data-hint-for="fileKTP">Belum ada file dipilih</span>
+        </div>
+
+        <div class="field">
+          <label for="fileFoto">Pas Foto Anak (3x4)</label>
+          <input type="file" id="fileFoto" name="fileFoto" accept=".jpg,.jpeg,.png" required>
+          <span class="file-hint" data-hint-for="fileFoto">Belum ada file dipilih</span>
+        </div>
+      </fieldset>
+
+      <div id="formMessage" class="form-message" role="status" aria-live="polite"></div>
+
+      <button type="submit" id="submitBtn" class="submit-btn">
+        <span class="btn-label">Kirim Pendaftaran</span>
+        <span class="btn-spinner" aria-hidden="true"></span>
+      </button>
+    </form>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="year"></span> SMP Akhwat Riyadhul Jannah &middot; Penerimaan Peserta Didik Baru</p>
+    <p><a href="admin.html">Panel Panitia</a></p>
+  </footer>
+
+  <script src="config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

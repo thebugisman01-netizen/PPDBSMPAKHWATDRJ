@@ -1,0 +1,242 @@
+/* ===========================================================
+   Admin dashboard styles — extends style.css
+   =========================================================== */
+
+.hidden { display: none !important; }
+
+.admin-body {
+  background: var(--cream);
+  min-height: 100vh;
+}
+
+/* ===== Login screen ===== */
+.login-screen {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: radial-gradient(circle at 20% 20%, var(--green-700), var(--green-950) 70%);
+}
+
+.login-card {
+  width: 100%;
+  max-width: 360px;
+  background: var(--paper);
+  border-radius: var(--radius-lg);
+  border-top: 4px solid var(--gold-400);
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.28);
+  padding: 32px 28px;
+  text-align: center;
+}
+
+.login-mark {
+  color: var(--green-900);
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.login-eyebrow {
+  margin: 0;
+  font-size: 0.78rem;
+  color: var(--green-700);
+  font-weight: 600;
+}
+
+.login-card h1 {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  margin: 4px 0 2px;
+  color: var(--green-950);
+}
+
+.login-sub {
+  margin: 0 0 22px;
+  color: var(--ink-soft);
+  font-size: 0.9rem;
+}
+
+.login-card .field { text-align: left; }
+
+.back-link {
+  display: inline-block;
+  margin-top: 16px;
+  font-size: 0.85rem;
+  color: var(--green-700);
+  text-decoration: none;
+}
+
+.back-link:hover { text-decoration: underline; }
+
+/* ===== Dashboard shell ===== */
+.dash-header {
+  background: var(--green-950);
+  color: #fff;
+  border-bottom: 3px solid var(--gold-400);
+}
+
+.dash-header-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.dash-header h1 {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  margin: 0;
+}
+
+.dash-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-secondary {
+  background: transparent;
+  border: 1.5px solid var(--gold-400);
+  color: #fff;
+  padding: 9px 16px;
+  border-radius: 100px;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.btn-secondary:hover { background: rgba(212, 175, 55, 0.18); }
+
+.dash-main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 28px 24px 60px;
+}
+
+/* ===== Stats ===== */
+.stats-row {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 22px;
+  flex-wrap: wrap;
+}
+
+.stat-card {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--green-700);
+  border-radius: var(--radius-md);
+  padding: 16px 20px;
+  min-width: 160px;
+}
+
+.stat-value {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 1.9rem;
+  color: var(--green-950);
+  font-weight: 600;
+}
+
+.stat-label {
+  font-size: 0.8rem;
+  color: var(--ink-soft);
+}
+
+/* ===== Toolbar ===== */
+.dash-toolbar {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+#searchInput {
+  flex: 1;
+  min-width: 220px;
+  padding: 11px 14px;
+  border: 1.5px solid var(--line);
+  border-radius: var(--radius-md);
+  font-family: var(--font-body);
+  font-size: 0.92rem;
+  background: var(--paper);
+}
+
+#searchInput:focus {
+  outline: none;
+  border-color: var(--green-700);
+  box-shadow: 0 0 0 3px rgba(45, 106, 79, 0.15);
+}
+
+.dash-toolbar .btn-secondary {
+  color: var(--green-950);
+  border-color: var(--green-700);
+}
+
+.dash-toolbar .btn-secondary:hover { background: var(--green-100); }
+
+/* ===== Table ===== */
+.table-scroll {
+  overflow-x: auto;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.86rem;
+  min-width: 1000px;
+}
+
+thead th {
+  text-align: left;
+  background: var(--green-100);
+  color: var(--green-950);
+  font-weight: 700;
+  padding: 12px 14px;
+  position: sticky;
+  top: 0;
+  white-space: nowrap;
+}
+
+tbody td {
+  padding: 12px 14px;
+  border-top: 1px solid var(--line);
+  vertical-align: top;
+  max-width: 220px;
+}
+
+tbody tr:hover { background: var(--cream); }
+
+.doc-links {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.doc-links a {
+  color: var(--green-700);
+  font-weight: 600;
+  font-size: 0.82rem;
+  text-decoration: none;
+}
+
+.doc-links a:hover { text-decoration: underline; }
+
+.empty-state {
+  text-align: center;
+  color: var(--ink-soft);
+  padding: 40px 20px;
+}
+
+@media (max-width: 640px) {
+  .stat-card { flex: 1; min-width: 130px; }
+}
